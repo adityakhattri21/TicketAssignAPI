@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const moment = require('moment');
 
 const ticketSchema = mongoose.Schema({
     desc:{
@@ -14,6 +15,10 @@ const ticketSchema = mongoose.Schema({
         type:mongoose.Schema.ObjectId,
         ref:'User',
         required:true
+    },
+    raisedAt:{
+        type:String,
+        default:()=>moment().utcOffset("+05:30").format("DD-MM-YYYY HH:mm:ss")
     }
 });
 

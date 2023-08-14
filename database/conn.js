@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const User = require("./models/userModel");
 
-mongoose.connect("mongodb://126.0.0.1:27017/ticketSystem",{useNewUrlParser:true,useUnifiedTopology:true})
+mongoose.connect(process.env.DB_URI,{useNewUrlParser:true,useUnifiedTopology:true})
 .then(()=>{
     console.log("Database connected with server");
 })
