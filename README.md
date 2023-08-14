@@ -14,7 +14,7 @@ Before setting up the project make sure you have Node.js installed on your syste
 recommend NPM or Yarn.
 1. Fork The repository
 2. Clone the repository<br>
-```git clone https://github.com/<Your_User_Name/TicketAssignAPI.git```<br>
+```git clone https://github.com/<Your_User_Name>/TicketAssignAPI.git```<br>
 3. Go into the directory containing the project.
 4. Install all the dependencies <br>
 ```npm i``` or ```npm install ```
