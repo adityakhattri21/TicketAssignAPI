@@ -16,7 +16,7 @@ app.use("/api/v1",ticketRoute);
 
 app.get("/",(req,res)=>{
     res.status(200).json({
-        message:"This is a test api which assigns tickets to authenticated users in Round Robin Fashion . Please read the readme here for more info : ``"
+        message:"This is a test api which assigns tickets to authenticated users in Round Robin Fashion . Please read the README here for more info : `https://github.com/adityakhattri21/TicketAssignAPI` "
     })
 })
 
