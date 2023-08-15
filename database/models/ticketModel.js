@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const moment = require('moment');
 
-const ticketSchema = mongoose.Schema({
+const ticketSchema = new mongoose.Schema({
     desc:{
         type:String,
         required:true
