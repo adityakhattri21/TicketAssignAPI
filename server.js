@@ -5,8 +5,19 @@ require("./database/conn");
 
 const port = 4000 || process.env.PORT;
 
-process.on("unhandledRejection" , ()=>{
-    console.log("Server Crashed due to unhandled promise rejection");
+process.on("unhandledRejection",(err)=>{
+    console.log(`Error: ${err.message}`);
+    console.log(`Shutting down the Server due to unHandled Promise Rejection`);
+    server.close(()=>{
+        process.exit(1);
+    });
+});
+
+//handling uncaughtException
+process.on("uncaughtException" , (err)=>{
+    console.log(`Error: ${err.message}`);
+    console.log(`Shutting down the Server due to unCaughtException `);
+    process.exit(1);
 })
 
 const server = app.listen(port,()=>{  // find why we are using const server here.
