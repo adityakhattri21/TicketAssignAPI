@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken")
 
 let lastUID ;
 
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
     uid:{
         type:Number,
         required:true,
